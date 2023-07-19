@@ -24,7 +24,7 @@ public class PatientController {
         return patentService.registerPatient(patientRequest);
     }
 
-    @PostMapping("/search")
+    @GetMapping("/search")
     public ResponseEntity searchPatient(@Valid @RequestBody PatientSearchCriteria criteria) throws JsonProcessingException {
         return patentService.searchPatient(criteria);
     }
