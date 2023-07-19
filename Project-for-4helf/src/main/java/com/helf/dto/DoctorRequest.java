@@ -2,6 +2,7 @@ package com.helf.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.helf.entity.Organization;
+import com.helf.entity.Shift;
 import com.helf.entity.enums.Status;
 import lombok.*;
 import org.w3c.dom.stylesheets.LinkStyle;
@@ -12,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Setter
 @Getter
+
 public class DoctorRequest {
 
     @JsonProperty("id")
@@ -40,16 +42,8 @@ public class DoctorRequest {
 
     @JsonProperty("gender")
     private String gender;
-
-    @JsonProperty("degree")
-    private String degree;
-
-    @JsonProperty("address")
-    private String address;
-
     @JsonProperty("status")
     private Status status;
-
     @JsonProperty("drRegistrationNo")
     private String drRegistrationNo;
 
@@ -58,24 +52,13 @@ public class DoctorRequest {
 
     @JsonProperty("stateMedicalCouncil")
     private String stateMedicalCouncil;
-
-    @JsonProperty("medicalCollege")
-    private String medicalCollege;
-
-    @JsonProperty("practicingField")
-    private String practicingField;
-
-    @JsonProperty("practicingSince")
-    private String practicingSince;
-
-    @JsonProperty("gstNo")
-    private String gstNo;
-
     @JsonProperty("Dob")
     private Long Dob;
 
     @JsonProperty("organizationList")
-    private List<Organization> organizationList;
+    private List<OrganizationRequest> organizationList;
 
+    @JsonProperty("shiftList")
+    private List<ShiftRequest> shiftList;
 }
 
