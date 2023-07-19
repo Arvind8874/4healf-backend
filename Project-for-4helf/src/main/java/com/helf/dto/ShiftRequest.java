@@ -27,5 +27,8 @@ public class ShiftRequest {
     private Long startDate;
     @JsonProperty("endDate")
     private Long endDate;
+    @JsonProperty("doctorsId")
+    private Long doctorsId;
+
 
 }
